@@ -91,8 +91,7 @@ class Deeplearn:
         model.save("mnist_LeNet.h5")
         # Evaluate the performance of our trained model
         scores = model.evaluate(x_test, y_test, verbose=1)
-        f = open("score","w")
-        f.write(str(scores[1]))
+        f = open("score","w")       
         g = open("Actual_score.txt","w")
         f.write(str(int(scores[1]*100)))
         g.write(str(scores[1]*100))
